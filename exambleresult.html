@@ -1,0 +1,107 @@
+<table border="1"
+<tr>
+<td>
+roll Number
+<td>
+<input
+type="number"
+id="numrno"
+placeholder="0"
+/>
+<tr>
+<td>
+name
+<td>
+<input
+type="text"
+id="tbxsname"
+placeholder="unknown"
+/>
+<tr>
+<td>
+mark-1
+<td>
+<input
+type="text"
+id="tbxm1"
+placeholder="0.0"
+/>
+<tr>
+<td>
+mark-2
+<td>
+<input
+type="text"
+id="tbxm2"
+placeholder="0.0"
+/>
+<tr>
+<td>
+total
+<td>
+<input 
+type="text"
+id="tbxtot"
+Placeholder="0.0"
+readonly="readonly"
+/>
+<tr>
+<td>
+average
+<td>
+<input
+type="text"
+id="tbxavg"
+placeholder="0.0"
+readonly="readonly"
+/>
+<tr>
+<td>
+result
+<td>
+<input
+type="text"
+id="tbxres"
+placeholder="fail"
+readonly="readonly"
+/>
+<tr>
+<td>
+<input
+type="button"
+value="cancel"
+onclick="location.href='exambleresult.html';"
+/>
+<td>
+<input
+type="button"
+value="Find"
+onclick="btnFind_onclick();"
+/>
+</table>
+
+<script>
+function btnFind_onclick(){
+var m1=tbxm1.value;
+var m2=tbxm2.value;
+
+m1=parseFloat(m1);
+m1=isNaN(m1) ? 0: m1;
+ 
+m2=parseFloat(m2);
+m2=isNaN(m2) ? 0: m2;
+
+var total= m1 + m2;
+tbxtot.value=total;
+var avg = total/2;
+tbxavg.value = avg;
+var result ="Fail";
+
+if(m1>34.4 && m2>34.4){
+result ='Pass';
+}else{
+result ='Fail';
+}
+tbxres.value =result;
+}
+</script>

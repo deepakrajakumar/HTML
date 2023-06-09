@@ -1,0 +1,34 @@
+Drink categories
+<hr color="blue"/>
+<input
+type="checkbox"
+id="chkbxhot"
+value="hot"
+oninput="chkbx_oninput()";
+/>Hot
+
+<br>
+<input
+type="checkbox"
+id="chkbxcool"
+value="cool"
+oninput="chkbx_oninput()";
+/>Cool
+
+<br>
+<input
+type="checkbox"
+id="chkbxsoft"
+value="soft"
+oninput="chkbx_oninput()";
+/>soft
+
+<script>
+function chkbx_oninput(){
+if(chkbxHot.cheched){
+alart('like hot Drink');
+}else{
+alart('Dislike Hot Drink')
+}
+}
+</script> 

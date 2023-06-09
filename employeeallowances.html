@@ -1,0 +1,110 @@
+<table border="1">
+<tr>
+<td>
+id
+<td>
+<input
+type="number"
+id="numeid"
+placeholder="0"
+/>
+
+<tr>
+<td>
+name
+<td>
+<input
+type="text"
+id="tbxename"
+placeholder="unknown"
+/>
+
+<tr>
+<td>
+salary
+<td>
+<input
+type="text"
+id="tbxsal"
+placeholder="0.0"
+oninput="tbxsal_oninput();"
+/>
+
+<tr>
+<td>
+house rent allowances
+<td>
+<input
+type="text"
+id="tbxhra"
+placeholder="0.0"
+readonly="readonly"
+/>
+
+<tr>
+<td>
+dearess allowance
+<td>
+<input
+type="text"
+id="tbxda"
+placeholder="0.0"
+readonly="readonly"
+/>
+<tr>
+<td>
+provident Fund
+<td>
+<input
+type="text"
+id="tbxpf"
+placeholder="0.0"
+readonly="readonly"
+/>
+<tr>
+<td>
+grosspay
+<td>
+<input
+type="text"
+id="tbxgpay"
+placeholder="0.0"
+readonly="readonly"
+/>
+
+<tr>
+<td>
+netpay
+<td>
+<input
+type="text"
+id="tbxnpay"
+placeholder="0.0"
+readonly="readonly"
+/>
+
+<tr align="0">
+<td colspan="1">
+<input
+type="butten"
+value="cancel"
+onclick="location.href='employeeallowances.html';"
+/>
+</table>
+<script>
+function tbxsal_oninput(){
+var sal=tbxsal.value;
+sal=parseflot(sal)
+sal=isNaN (sal)? 0;sal
+var hra=sal*(20/100);
+var da=sal*15/100);
+var pf=sal*(35/100);
+var gpay=sal+hra+da
+var npay=gpay-pf;
+tbxhra.value=hra;
+tbxda.value=da;
+tbxpf.value=pf;
+tbxgpay.value=gpay
+tbxnpay.value=npay
+}
+</script>

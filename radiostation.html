@@ -1,0 +1,51 @@
+<input type='radio'
+id = 'rdohot'
+value = 'Hot'
+name = 'rdodrinks'
+oninput = "rdo_oninput();"
+/>Hot
+
+<br>
+
+<input type='radio'
+id = 'rdocool'
+value = 'Cool'
+name = 'rdodrinks'
+oninput = "rdo_oninput();"
+/>Cool
+
+<br>
+
+<input type='radio'
+id = 'rdosoft'
+value = 'Soft'
+name = 'rdodrinks'
+oninput ="rdo_oninput();"
+/>Soft
+<br>
+
+<br>
+
+<div id ="divop">
+hot 
+
+</div>
+
+<script>
+function rdo_oninput() {
+if (rdohot.checked) {
+
+document.title=rdoHot.value;
+divop.innerHTML=rdoHot.value;
+}
+
+if (rdocool.checked) {
+document.title=rdocool.value;
+divop.innerHTML=rdocool.value;
+}
+if (rdosoft.checked) {
+document.title=rdosoft.value;
+divop.innerHTML=rdosoft.value;
+}
+}
+</script>
